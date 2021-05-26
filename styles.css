@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body {
+	background-color: #fafafa;
+	height: 100vh;
+	margin: 0;
+	transition: background 0.2s linear;
+}
+
+body.dark {
+	background: #292C35;
+}
+
+.header{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin: 20px;
+  
+}
+.header .checkbox {
+	opacity: 0;
+}
+
+.header .label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.header .label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.header .checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+
+.header .fa-moon-o {
+	color: #4da7db;
+}
+
+.header .fa-sun-o {
+	color: #f39c12;
+}
+
+.mode{
+    display: flex;
+    justify-content: center;
+}
+.mode button{
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: rgba(128, 255, 0, 0);
+    width: 50px;
+    height: 50px;
+}
+.mode button:hover i{
+    transition: 0.2s;
+    transform: scale(2);
+    color: #628cffab;
+}
+.mode button i{
+    transform: scale(2.2);
+}
+.header .btn{
+    
+    padding: 8px 20px;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 1.1em;
+    box-shadow: 0 5px 5px rgb(0 0 0 / 38%);
+    border: none;
+}
+.header .btn:hover{
+    transition: 0.2s;
+    transform: scale(0.95);
+    background: #628cffab;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container .box{
+    width: 20%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    color: #fff;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.container .large{
+    width: 20%;
+}
+.container .small{
+    width: 10%;
+}
